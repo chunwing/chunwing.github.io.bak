@@ -3,7 +3,6 @@ jQuery(document).ready(function($){
     var $chart = $('.chart');
     var $job = $('.job');
     var $work = $('.work');
-        alert('2');
     //hide timeline blocks which are outside the viewport
     $timeline_block.each(function(){
         //console.log($(this).offset().top);
@@ -13,8 +12,7 @@ jQuery(document).ready(function($){
         }
     });
     //on scolling, show/animate timeline blocks when enter the viewport
-    $(window).scroll(function(){
-        alert('1');
+    $(window).on('scroll touchmove',function(){
         $chart.each(function(index, element){
             if( $(this).parents('#skill').offset().top <= $(window).scrollTop()+$(window).height()*0.75 ) {
                 $(this).removeClass('is-hidden').easyPieChart({
