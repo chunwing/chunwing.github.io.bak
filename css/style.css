@@ -143,6 +143,8 @@ p {
 .chart {
     margin-bottom: 30px;
     height: 106px;
+    padding-right: 10%;
+    display: inline-block;
 }
 .percent {
     line-height: 8;

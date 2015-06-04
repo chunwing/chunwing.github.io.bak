@@ -21,8 +21,10 @@ jQuery(document).ready(function($){
                 size: 100,
                 trackColor: '#333',
                 barColor: '#999'
-            }).find('canvas').addClass('rotateIn animated').css('-webkit-animation-delay', index/5 + 's');
-            $(this).find('span').addClass('fadeIn').css('-webkit-animation-delay', index/5 + 's');
+            });
+        });
+        $work.each(function(index, element){
+            $(this).removeClass('is-hidden');
         });
     }   
     //on scolling, show/animate timeline blocks when enter the viewport
@@ -41,13 +43,11 @@ jQuery(document).ready(function($){
                 $(this).find('span').addClass('fadeIn').css('-webkit-animation-delay', index/5 + 's');
             }
         });
-
         $job.each(function(index, element){
             if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 ) {
                 $(this).removeClass('is-hidden').addClass('fadeInUp');
             }
         });
-
         $work.each(function(index, element){
             if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 ) {
                 $(this).removeClass('is-hidden').addClass('fadeInUp').css('-webkit-animation-delay', index/5 + 's');
