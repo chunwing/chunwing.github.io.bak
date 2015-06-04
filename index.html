@@ -1,5 +1,482 @@
-<html>
-    <h1>
-        Hello World!
-    </h1>
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://prinzhorn.github.io/skrollr/examples/classic.html -->
+<html class="skrollr skrollr-desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>web-bro.io</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="css/timeline.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <style type="text/css">
+            html, body {
+                height:100%;
+            }
+            .skrollr-desktop body {
+                height:100% !important;
+            }
+            body {
+                font-family:sans-serif;
+            }
+            p {
+                margin:1em 0;
+            }
+            .chart {
+                margin-bottom: 30px;
+                height: 106px;
+            }
+            .percent {
+                line-height: 8;
+                width: 100px;
+                position: absolute;
+            }
+            .parallax-image-wrapper {
+                position:fixed;
+                left:0;
+                width:100%;
+                overflow:hidden;
+                background-color:#222;
+            }
+            .parallax-image-wrapper-50 {
+                height:50%;
+                top:-50%;
+            }
+            .parallax-image-wrapper-100 {
+                height:100%;
+                top:-100%;
+            }
+            .parallax-image {
+                display:none;
+                position:absolute;
+                bottom:0;
+                left:0;
+                width:100%;
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size:cover;
+            }
+            .parallax-image-50 {
+                height:200%;
+                top:-50%;
+                background-color: #eee;
+            }
+            .parallax-image-100 {
+                height:100%;
+                top:0;
+            }
+            .parallax-image.skrollable-between {
+                display:block;
+            }
+            .no-skrollr .parallax-image-wrapper {
+                display:none !important;
+            }
+            #skrollr-body {
+                height:100%;
+                overflow:visible;
+                position:relative;
+            }
+            #skill .panel{
+                padding-bottom: 0px;
+            }
+            .gap {
+                background:transparent center no-repeat;
+                background-size:cover;
+            }
+            .skrollr .gap {
+                background:transparent !important;
+            }
+            .gap-50 {
+                height:50%;
+            }
+            .gap-100 {
+                height:100%;
+            }
+            .content {
+                background:#eee;
+                padding:1em;
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                box-sizing:border-box;
+            }
+            .navbar{
+                margin: 0;
+            }
+            .content-full {
+                height:100%;
+            }
+            #done {
+                height:100%;
+            }
+        </style>
+    </head>
+    <body cz-shortcut-listen="true">
+        <!--hero image--> 
+        <div class="parallax-image-wrapper parallax-image-wrapper-100 skrollable skrollable-between" data-anchor-target="#dragons + .gap" data-bottom-top="transform:translate3d(0px, 200%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+            <div class="parallax-image parallax-image-100 skrollable skrollable-between" style="background-image: url(IMG_0504.jpg);" data-anchor-target="#dragons + .gap" data-bottom-top="transform: translate3d(0px, -80%, 0px);" data-top-bottom="transform: translate3d(0px, 80%, 0px);"></div>
+        </div>
+        <!--video-->
+        <div class="parallax-image-wrapper parallax-image-wrapper-100 skrollable skrollable-between" data-anchor-target="#aboutme + .gap" data-bottom-top="transform:translate3d(0px, 200%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+            <video class="parallax-image skrollable skrollable-between" data-anchor-target="#aboutme + .gap" data-bottom-top="transform: translate3d(0px, -60%, 0px);" data-top-bottom="transform: translate3d(0px, 60%, 0px);" autoplay  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
+                <source src="background.webm" type="video/webm"></source>
+                <source src="background.mp4" type="video/mp4"></source>
+            </video>
+        </div>
+        <!--experience-->
+        <div class="parallax-image-wrapper parallax-image-wrapper-100 skrollable skrollable-between" data-anchor-target="#skill + .gap" data-bottom-top="transform:translate3d(0px, 200%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)" >
+            <div class="parallax-image parallax-image-100 skrollable skrollable-between" style="background-image: url(LNYEQYRA6G.jpg);" data-anchor-target="#skill + .gap" data-bottom-top="transform: translate3d(0px, -60%, 0px);" data-top-bottom="transform: translate3d(0px, 60%, 0px);"></div>
+        </div>
+        <!---->
+        <!--div class="parallax-image-wrapper parallax-image-wrapper-50 skrollable skrollable-before" data-anchor-target="#kittens + .gap" data-bottom-top="transform:translate3d(0px, 300%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+        <div class="parallax-image parallax-image-50 skrollable skrollable-before" style="background-image: url(LNYEQYRA6G.jpg);" data-anchor-target="#kittens + .gap" data-bottom-top="transform: translate3d(0px, -60%, 0px);" data-top-bottom="transform: translate3d(0px, 60%, 0px);"></div>
+        </div-->
+        <div id="skrollr-body">
+            <nav class="hidden navbar navbar-inverse navbar-fixed-top" id="dragons">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            WEB-BRO Studio
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="gap gap-100" id="hero">
+                <div id="polina" class="col-xs-12">
+                    <div id="photo-header" class="text-center">
+                        <!-- PHOTO (AVATAR) -->
+                        <div id="photo">
+                            <img src="wing.jpg" alt="avatar" class="img-circle" width="150">
+                        </div>
+                        <div id="text-header">
+                            <h1>Wing N.<sup>29yo</sup></h1>
+                            <h3>Web Developer | mr.ncwing@gmail.com</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="aboutme" class="content">
+                <div class="panel container">
+                    <div class="panel-heading text-uppercase col-md-3">About me</div>
+                    <div class="panel-body col-md-9">
+                        I am fontend web developer. With an extensive 3 years web admin area and 3 years web development, now, he is a web developer working in a telecom company. 
+                        <br/>
+                        I am interested in rock climbing. I think programmer is like a climber, facing uncountable failures before success, even in the living. 
+                        <br/> 
+                        My motto is: Keep It Simply and Stupid.
+                    </div>
+                </div>
+            </div>
+            <div class="gap gap-50">
+            </div>
+            <div class="content" id="bacons">
+                <div class="panel container">
+                    <div class="panel-heading text-uppercase col-md-3">Education</div>
+                    <section id="cd-timeline" class="panel-body col-md-9 cd-container cssanimations">
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img">
+                                <span class="cd-date">1997</span>
+                            </div> <!-- cd-timeline-img -->
+                            <div class="cd-timeline-content">
+                                <h2>Secondary School</h2>
+                                <p>
+                                    Hong Kong Women's Club College<br/>
+                                    Form 5 Graduated (1997 - 2002)
+                                </p>
+                            </div> <!-- cd-timeline-content -->
+                        </div> <!-- cd-timeline-block -->
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img">
+                                <span class="cd-date">2002</span>
+                            </div> <!-- cd-timeline-img -->
+                            <div class="cd-timeline-content">
+                                <h2>Diploma in Software Engineering</h2>
+                                <p>
+                                    Hong Kong Institute of Vocational Education<br/>
+                                    2 Years Course (2002 - 2004)<br/>
+                                    Graduate with credit
+                                </p>
+                            </div> <!-- cd-timeline-content -->
+                        </div> <!-- cd-timeline-block -->
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img">
+                                <span class="cd-date">2004</span>
+                            </div> <!-- cd-timeline-img -->
+                            <div class="cd-timeline-content">
+                                <h2>Higher diplomer in Multimedia & Multilingual Computing</h2>
+                                <p>
+                                    The Hong Kong Polytechnic University<br/>
+                                    2 Years Course (2004 - 2006)<br/>
+                                    Graduate with credit
+                                </p>
+                            </div> <!-- cd-timeline-content -->
+                        </div> <!-- cd-timeline-block -->
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img">
+                                <span class="cd-date">2006</span>
+                            </div> <!-- cd-timeline-img -->
+                            <div class="cd-timeline-content">
+                                <h2>Degree of Internet & Multimedia Technologies</h2>
+                                <p>
+                                    BSc (Hons) of Science<br/>
+                                    The Hong Kong Polytechnic University<br/>
+                                    3 Years Course (2006 - 2009)<br/>
+                                    Graduate with 2<sup>nd</sup> Hons
+                                </p>
+                            </div> <!-- cd-timeline-content -->
+                        </div> <!-- cd-timeline-block -->
+                    </section> <!-- cd-timeline -->
+                </div>
+            </div>
+            <div id="experience" class="content">
+                <div class="panel container">
+                    <div class="panel-heading text-uppercase col-md-3">Experience</div>
+                    <div class="panel-body col-md-9">
+                        <div class="job animated is-hidden">
+                            <h2>Web Developer</h2>
+                            <small>Pacnet Global Limited | Dec / 2014 - Present</small>
+                            <p>
+                                Working closely with the Director for Marketing Communications, responsible for the management and administration of the company’s external
+                                and internal websites.<br/>The role will require development of custom programs to extend the functionality of these sites and deliver a fulfilling user-experience to all stakeholders.
+                            </p>
+                            <hr/>
+                        </div>
+                        <div class="job animated is-hidden">
+                            <h2>Frontend Developer</h2>
+                            <small>Live It China Limited | Feb / 2014 - Dec / 2014</small>
+                            <p>
+                                Frontend developmet on the company website. Also handling landing pages development, mobile app frontend development, and system testing.
+                                <br/>The company website basically is a webapp building in an MVC platform (Meteor js). What I did is to implement the frontend to the website. Involved technique: Bootstrap, CSS3, HTML5, jQuery, MVC(Meteor js), coffee script.
+                            </p>
+                            <hr/>
+                        </div>
+                        <div class="job animated is-hidden">
+                            <h2>Web Developer</h2>
+                            <small>Whitespace Hong Kong Ltd. | Mar / 2012 - Feb / 2014</small>
+                            <p>
+                                Develope websites in both fontend(jquery) and backend(wordpress) coding<br/>
+                                Maintain and enhance existing client websites and applications.<br/>
+                                Accountable for text and graphic updating on website, including content revisions.<br/>
+                                Maintain current E-Marketing program, coding and delivery of e-flyers and e-newsletters. Conduct testing and troubleshoot websites, HTML email and content management issues. Work with the creative team, and support overall project objectives.<br/>
+                                Maintain web accounts and provide troubleshooting and maintenance.
+                            </p>
+                            <hr/>
+                        </div>
+                        <div class="job animated is-hidden">
+                            <h2>IT & Web Master</h2>
+                            <small>Raffles International College (HK) Ltd. | Jun / 2009 - Feb / 2012</small>
+                            <p>
+                                Develop and manitain OFFICE WEBSITE (html, css, javascript, jquery, asp) <br/>
+                                Integrating third-party APIs (FBML, GOOGLE API) <br/>
+                                Provide consultation and advice on ONLINE MARKETING for Marketing Dept. <br/>
+                                Provide ONLINE MARKETING MATERIALS (EDM, ONLINE ENQUIRY) for Marketing Dept. 5. Update and maintain ONLINE RESOURCES (Website, Facebook, Blog)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="skill" class="content">
+                <div class="panel container">
+                    <div class="panel-heading text-uppercase col-md-3">Skills</div>
+                    <div class="panel-body col-md-9">
+                        <div class="row">
+                            <div class="chart col-md-3 is-hidden" data-percent="90" id="easy-pie-chart">
+                                <span class="label percent animated">HTML5</span>
+                            </div> 
+                            <div class="chart col-md-3 is-hidden" data-percent="90" id="easy-pie-chart">
+                                <span class="label percent animated">CSS3</span>
+                            </div> 
+                            <div class="chart col-md-3 is-hidden" data-percent="70" id="easy-pie-chart">
+                                <span class="label percent animated">Javascript</span>
+                            </div> 
+                            <div class="chart col-md-3 is-hidden" data-percent="80" id="easy-pie-chart">
+                                <span class="label percent animated">jQuery</span>
+                            </div> 
+                            <div class="chart col-md-3 is-hidden" data-percent="85" id="easy-pie-chart">
+                                <span class="label percent animated">Bootstrap3</span>
+                            </div> 
+                            <div class="chart col-md-3 is-hidden" data-percent="55" id="easy-pie-chart">
+                                <span class="label percent animated">PHP</span>
+                            </div>
+                            <div class="chart col-md-3 is-hidden" data-percent="60" id="easy-pie-chart">
+                                <span class="label percent animated">Github</span>
+                            </div>
+                            <div class="chart col-md-3 is-hidden" data-percent="50" id="easy-pie-chart">
+                                <span class="label percent animated">Photoshop</span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="gap gap-50" style="background-image:url(img/LNYEQYRA6G.jpg);"></div>
+            <div id="showcase" class="content">
+                <div class="panel container">
+                    <div class="panel-heading text-uppercase col-md-3">Showcases</div>
+                    <div class="panel-body col-md-9">
+                        <ul class="grid cs-style-3">
+                            <li class="work animated is-hidden">
+                                <figure>
+                                    <img src="showcase/pacnet.png" alt="Pacnet">
+                                    <figcaption>
+                                        <h3>Pacnet</h3>
+                                        <span class="date">2015</span><br/>
+                                        <span class="label">php</span>
+                                        <span class="label label-default">bootstrap3</span>
+                                        <span class="label label-default">skrollr</span>
+                                        <span class="label label-default">html5</span>
+                                        <span class="label label-default">css3</span>
+                                        <a href="http://www.pacnet.com/" target="_blank">Visit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="work animated is-hidden">
+                                <figure>
+                                    <img src="showcase/mt.png" alt="Match Talent">
+                                    <figcaption>
+                                        <h3>Match Talent</h3>
+                                        <span class="date">2015</span><br/>
+                                        <span class="label">wordpress</span>
+                                        <span class="label label-default">bootstrap3</span>
+                                        <span class="label label-default">html5</span>
+                                        <span class="label label-default">css3</span>
+                                        <span class="label label-default">seo</span>
+                                        <a href="http://matchtalent.com.hk/" target="_blank">Visit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="work animated is-hidden">
+                                <figure>
+                                    <img src="showcase/fylp.png" alt="find your language partner">
+                                    <figcaption>
+                                        <h3>fylp</h3>
+                                        <span class="date">2015</span><br/>
+                                        <span class="label">wordpress</span>
+                                        <span class="label label-default">bootstrap3</span>
+                                        <span class="label label-default">html5</span>
+                                        <span class="label label-default">css3</span>
+                                        <span class="label label-default">jquery</span>
+                                        <a href="http://www.fylp.com/" target="_blank">Visit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="work animated is-hidden">
+                                <figure>
+                                    <img src="showcase/lic.png" alt="LiveitChina">
+                                    <figcaption>
+                                        <h3>LiveitChina</h3>
+                                        <span class="date">2014</span><br/>
+                                        <span class="label">meteor</span>
+                                        <span class="label label-default">bootstrap3</span>
+                                        <span class="label label-default">mvc</span>
+                                        <span class="label label-default">github</span>
+                                        <span class="label label-default">css3</span>
+                                        <a href="http://www.liveitchina.com/" target="_blank">Visit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="work animated is-hidden">
+                                <figure>
+                                    <img src="showcase/k11.png" alt="K11">
+                                    <figcaption>
+                                        <h3>K11 (Corporate site)</h3>
+                                        <span class="date">2014</span><br/>
+                                        <span class="label">wordpress</span>
+                                        <span class="label label-default">bootstrap</span>
+                                        <span class="label label-default">jquery</span>
+                                        <span class="label label-default">isotope</span>
+                                        <span class="label label-default">html5</span>
+                                        <a href="http://www.k11.com/corp/" target="_blank">Visit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="work animated is-hidden">
+                                <figure>
+                                    <img src="showcase/ls.png" alt="LifeStyle Logistics">
+                                    <figcaption>
+                                        <h3>LifeStyle Logistics</h3>
+                                        <span class="date">2013</span><br/>
+                                        <span class="label">wordpress</span>
+                                        <span class="label label-default">html5</span>
+                                        <span class="label label-default">css3</span>
+                                        <span class="label label-default">parallax</span>
+                                        <span class="label label-default">multilingual</span>
+                                        <a href="http://lifestyle-log.com/" target="_blank">Visit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="work animated is-hidden">
+                                <figure>
+                                    <img src="showcase/ct.png" alt="Callixto">
+                                    <figcaption>
+                                        <h3>Callixto</h3>
+                                        <span class="date">2013</span><br/>
+                                        <span class="label">wordpress</span>
+                                        <span class="label label-default">html</span>
+                                        <span class="label label-default">css</span>
+                                        <span class="label label-default">jquery</span>
+                                        <span class="label label-default">shopping cart</span>
+                                        <a href="http://www.callixto.com/" target="_blank">Visit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="work animated is-hidden">
+                                <figure>
+                                    <img src="showcase/nt.png" alt="Nha Trang">
+                                    <figcaption>
+                                        <h3>Nha Trang</h3>
+                                        <span class="date">2013</span><br/>
+                                        <span class="label">wordpress</span>
+                                        <span class="label label-default">html</span>
+                                        <span class="label label-default">css</span>
+                                        <span class="label label-default">jquery</span>
+                                        <span class="label label-default">scrollable</span>
+                                        <a href="http://www.k11.com/corp/" target="_blank">Visit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="contactme" class="content">
+                <div class="panel container">
+                    <div class="panel-heading text-uppercase col-md-3">Contact me</div>
+                    <div class="panel-body col-md-3">
+                        <h3>Gmail</h3>
+                        <a href="mailto:mr.ncwing@gmail.com">mr.ncwing@gmail.com</a>
+                    </div>
+                    <div class="panel-body col-md-3">
+                        <h3>Facebook</h3>
+                        <a href="https://www.facebook.com/nccwu">+ Add Friend</a>
+                    </div>
+                    <div class="panel-body col-md-3">
+                        <h3>Linkedin</h3>
+                        <a href="https://hk.linkedin.com/pub/wing-ng/88/966/267">View my profile</a>
+                    </div>
+                </div>
+                <footer class="text-center small">
+                    &copy; Wing Ng <script>document.write(new Date().getFullYear())</script>
+                </footer>
+            </div>
+        </div>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="js/chart.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/toucheffects.js"></script>
+        <script type="text/javascript" src="js/skrollr.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script> <!-- Resource jQuery -->
+        <script type="text/javascript">
+            skrollr.init({
+                smoothScrolling: false,
+            mobileDeceleration: 0.004
+            });
+        </script>
+    </body>
 </html>
