@@ -113,6 +113,23 @@
             #done {
                 height:100%;
             }
+            .grid figure{
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                -webkit-transition:background-position .4s;  
+                -moz-transition:background-position .4s;  
+                -o-transition:background-position .4s;  
+                transition:background-position .4s;  
+            }
+            .grid figure:hover{
+                    background-position: 0 -50px;
+            }
+            .grid figure img{
+                opacity: 1;
+            }
+            .grid figure:hover img{
+                opacity: 0;
+            }
         </style>
     </head>
     <body cz-shortcut-listen="true">
@@ -319,7 +336,7 @@
                     <div class="panel-body col-md-9">
                         <ul class="grid cs-style-3">
                             <li class="work animated is-hidden">
-                                <figure>
+                                <figure style="background-image: url('showcase/color/pacnet.png');">
                                     <img src="showcase/pacnet.png" alt="Pacnet">
                                     <figcaption>
                                         <h3>Pacnet</h3>
@@ -334,7 +351,7 @@
                                 </figure>
                             </li>
                             <li class="work animated is-hidden">
-                                <figure>
+                                <figure style="background-image: url('showcase/color/mt.png');">
                                     <img src="showcase/mt.png" alt="Match Talent">
                                     <figcaption>
                                         <h3>Match Talent</h3>
@@ -349,7 +366,7 @@
                                 </figure>
                             </li>
                             <li class="work animated is-hidden">
-                                <figure>
+                                <figure style="background-image: url('showcase/color/fylp.png');">
                                     <img src="showcase/fylp.png" alt="find your language partner">
                                     <figcaption>
                                         <h3>fylp</h3>
@@ -364,7 +381,7 @@
                                 </figure>
                             </li>
                             <li class="work animated is-hidden">
-                                <figure>
+                                <figure style="background-image: url('showcase/color/lic.png');" >
                                     <img src="showcase/lic.png" alt="LiveitChina">
                                     <figcaption>
                                         <h3>LiveitChina</h3>
@@ -379,7 +396,7 @@
                                 </figure>
                             </li>
                             <li class="work animated is-hidden">
-                                <figure>
+                                <figure style="background-image: url('showcase/color/k11.png');">
                                     <img src="showcase/k11.png" alt="K11">
                                     <figcaption>
                                         <h3>K11 (Corporate site)</h3>
@@ -394,7 +411,7 @@
                                 </figure>
                             </li>
                             <li class="work animated is-hidden">
-                                <figure>
+                                <figure style="background-image: url('showcase/color/ls.png');" >
                                     <img src="showcase/ls.png" alt="LifeStyle Logistics">
                                     <figcaption>
                                         <h3>LifeStyle Logistics</h3>
@@ -409,7 +426,7 @@
                                 </figure>
                             </li>
                             <li class="work animated is-hidden">
-                                <figure>
+                                <figure style="background-image: url('showcase/color/ct.png');">
                                     <img src="showcase/ct.png" alt="Callixto">
                                     <figcaption>
                                         <h3>Callixto</h3>
@@ -424,7 +441,7 @@
                                 </figure>
                             </li>
                             <li class="work animated is-hidden">
-                                <figure>
+                                <figure style="background-image: url('showcase/color/nt.png');" >
                                     <img src="showcase/nt.png" alt="Nha Trang">
                                     <figcaption>
                                         <h3>Nha Trang</h3>

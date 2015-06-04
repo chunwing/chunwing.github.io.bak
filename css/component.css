@@ -185,7 +185,9 @@
     bottom: 20px;
     right: 20px;
 }
-
+.cs-style-3 figcaption a:hover {
+    background-color: #666;
+}
 /* Caption Style 4 */
 .cs-style-4 li {
     -webkit-perspective: 1700px;
