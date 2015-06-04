@@ -11,8 +11,22 @@ jQuery(document).ready(function($){
             $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
         }
     });
+    if ($(window).width() <= 768){  
+        $chart.each(function(index, element){
+            $(this).removeClass('is-hidden').easyPieChart({
+                animate: 2000,
+                scaleColor: false,
+                lineWidth: 5,
+                lineCap: 'square',
+                size: 100,
+                trackColor: '#333',
+                barColor: '#999'
+            }).find('canvas').addClass('rotateIn animated').css('-webkit-animation-delay', index/5 + 's');
+            $(this).find('span').addClass('fadeIn').css('-webkit-animation-delay', index/5 + 's');
+        });
+    }   
     //on scolling, show/animate timeline blocks when enter the viewport
-    $(window).on('scroll touchmove',function(){
+    $(window).on('scroll',function(){
         $chart.each(function(index, element){
             if( $(this).parents('#skill').offset().top <= $(window).scrollTop()+$(window).height()*0.75 ) {
                 $(this).removeClass('is-hidden').easyPieChart({
