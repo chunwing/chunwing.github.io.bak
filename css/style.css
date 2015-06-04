@@ -201,9 +201,13 @@ video.parallax-image {
     overflow:visible;
     position:relative;
 }
+#skill{
+    height: 656px;
+}
 #skill .panel{
     padding-bottom: 0px;
 }
+
 .gap {
     background:transparent center no-repeat;
     background-size:cover;
@@ -263,12 +267,25 @@ video.parallax-image {
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
 
+#skill{
+    height: 384px;
+}
+.chart{
+    padding-right: 3%;
+}
 }
 /* Small devices (tablets, 768px and up) */
 @media only screen and (min-width : 768px) {
     #aboutme{
         bottom: 0;
     }
+
+#skill{
+    height: 376px;
+}
+.chart{
+    padding-right: 10%;
+}
     .panel{
         padding: 50px 0;
     }
