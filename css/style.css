@@ -18,7 +18,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway";
     font-weight: 300;
 }
-
+h3{
+    font-size: 16px;
+}
 /* Links */
 a {
     color: #aaa;
@@ -74,7 +76,7 @@ a:after {
 
 .panel{
     background-color: transparent;
-    padding: 50px 0;
+    padding: 30px 0;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -104,7 +106,7 @@ a:after {
     padding: 0;
 }
 h1 {
-    font-size: 6rem;
+    font-size: 3rem;
     text-transform: uppercase;
     margin-top: 0;
     letter-spacing: .3rem;
@@ -129,7 +131,160 @@ h1 {
     margin-bottom: 150px;
 }
 
-@media screen and (max-device-width: 800px) {
-    html { background: url(http://demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
-    #bgvid { display: none; }
+html, body {
+    height:100%;
 }
+.skrollr-desktop body {
+    height:100% !important;
+}
+body {
+    font-family:sans-serif;
+}
+p {
+    margin:1em 0;
+}
+.chart {
+    margin-bottom: 30px;
+    height: 106px;
+}
+.percent {
+    line-height: 8;
+    width: 100px;
+    position: absolute;
+}
+.parallax-image-wrapper {
+    position:fixed;
+    left:0;
+    width:100%;
+    overflow:hidden;
+    background-color:#222;
+}
+.parallax-image-wrapper-50 {
+    height:50%;
+    top:-50%;
+}
+.parallax-image-wrapper-100 {
+    height:100%;
+    top:-100%;
+}
+.parallax-image {
+    display:none;
+    position:absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+video.parallax-image {
+    left: -50%;
+    height: 100%;
+    width: auto;
+}
+.parallax-image-50 {
+    height:200%;
+    top:-50%;
+    background-color: #eee;
+}
+.parallax-image-100 {
+    height:100%;
+    top:0;
+}
+.parallax-image.skrollable-between {
+    display:block;
+}
+.no-skrollr .parallax-image-wrapper {
+    display:none !important;
+}
+#skrollr-body {
+    height:100%;
+    overflow:visible;
+    position:relative;
+}
+#skill .panel{
+    padding-bottom: 0px;
+}
+.gap {
+    background:transparent center no-repeat;
+    background-size:cover;
+}
+.skrollr .gap {
+    background:transparent !important;
+}
+.gap-50 {
+    height:50%;
+}
+.gap-100 {
+    height:100%;
+}
+.content {
+    background:#eee;
+    padding:1em;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.navbar{
+    margin: 0;
+}
+.content-full {
+    height:100%;
+}
+#done {
+    height:100%;
+}
+.grid figure{
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-transition:background-position .4s;  
+    -moz-transition:background-position .4s;  
+    -o-transition:background-position .4s;  
+    transition:background-position .4s;  
+}
+.grid figure:hover{
+    background-position: 0 -50px;
+}
+.grid figure img{
+    opacity: 1;
+}
+.grid figure:hover img{
+    opacity: 0;
+}
+.menu-item{
+    display: inline-block !important;
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width : 768px) {
+    h1{
+        font-size: 6rem;
+    }
+    h3{
+        font-size: 24px;
+    }
+    .panel{
+        padding: 50px 0;
+    }
+    video.parallax-image {
+        left: 0;
+        height: auto;
+        width: 100%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width : 992px) { }
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width : 1200px) { }

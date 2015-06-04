@@ -8,6 +8,7 @@
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
@@ -15,124 +16,9 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/component.css" />
         <style type="text/css">
-            html, body {
-                height:100%;
-            }
-            .skrollr-desktop body {
-                height:100% !important;
-            }
-            body {
-                font-family:sans-serif;
-            }
-            p {
-                margin:1em 0;
-            }
-            .chart {
-                margin-bottom: 30px;
-                height: 106px;
-            }
-            .percent {
-                line-height: 8;
-                width: 100px;
-                position: absolute;
-            }
-            .parallax-image-wrapper {
-                position:fixed;
-                left:0;
-                width:100%;
-                overflow:hidden;
-                background-color:#222;
-            }
-            .parallax-image-wrapper-50 {
-                height:50%;
-                top:-50%;
-            }
-            .parallax-image-wrapper-100 {
-                height:100%;
-                top:-100%;
-            }
-            .parallax-image {
-                display:none;
-                position:absolute;
-                bottom:0;
-                left:0;
-                width:100%;
-                background-repeat:no-repeat;
-                background-position:center;
-                background-size:cover;
-            }
-            .parallax-image-50 {
-                height:200%;
-                top:-50%;
-                background-color: #eee;
-            }
-            .parallax-image-100 {
-                height:100%;
-                top:0;
-            }
-            .parallax-image.skrollable-between {
-                display:block;
-            }
-            .no-skrollr .parallax-image-wrapper {
-                display:none !important;
-            }
-            #skrollr-body {
-                height:100%;
-                overflow:visible;
-                position:relative;
-            }
-            #skill .panel{
-                padding-bottom: 0px;
-            }
-            .gap {
-                background:transparent center no-repeat;
-                background-size:cover;
-            }
-            .skrollr .gap {
-                background:transparent !important;
-            }
-            .gap-50 {
-                height:50%;
-            }
-            .gap-100 {
-                height:100%;
-            }
-            .content {
-                background:#eee;
-                padding:1em;
-                -webkit-box-sizing:border-box;
-                -moz-box-sizing:border-box;
-                box-sizing:border-box;
-            }
-            .navbar{
-                margin: 0;
-            }
-            .content-full {
-                height:100%;
-            }
-            #done {
-                height:100%;
-            }
-            .grid figure{
-                background-repeat: no-repeat;
-                background-position: 0 0;
-                -webkit-transition:background-position .4s;  
-                -moz-transition:background-position .4s;  
-                -o-transition:background-position .4s;  
-                transition:background-position .4s;  
-            }
-            .grid figure:hover{
-                background-position: 0 -50px;
-            }
-            .grid figure img{
-                opacity: 1;
-            }
-            .grid figure:hover img{
-                opacity: 0;
-            }
         </style>
     </head>
-    <body cz-shortcut-listen="true">
+    <body cz-shortcut-listen="true" data-spy="scroll" data-offset="0" data-target="#nav">
         <!--hero image--> 
         <div class="parallax-image-wrapper parallax-image-wrapper-100 skrollable skrollable-between" data-anchor-target="#dragons + .gap" data-bottom-top="transform:translate3d(0px, 200%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)">
             <div class="parallax-image parallax-image-100 skrollable skrollable-between" style="background-image: url(IMG_0504.jpg);" data-anchor-target="#dragons + .gap" data-bottom-top="transform: translate3d(0px, -80%, 0px);" data-top-bottom="transform: translate3d(0px, 80%, 0px);"></div>
@@ -148,20 +34,51 @@
         <div class="parallax-image-wrapper parallax-image-wrapper-100 skrollable skrollable-between" data-anchor-target="#skill + .gap" data-bottom-top="transform:translate3d(0px, 200%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)" >
             <div class="parallax-image parallax-image-100 skrollable skrollable-between" style="background-image: url(LNYEQYRA6G.jpg);" data-anchor-target="#skill + .gap" data-bottom-top="transform: translate3d(0px, -60%, 0px);" data-top-bottom="transform: translate3d(0px, 60%, 0px);"></div>
         </div>
-        <!---->
-        <!--div class="parallax-image-wrapper parallax-image-wrapper-50 skrollable skrollable-before" data-anchor-target="#kittens + .gap" data-bottom-top="transform:translate3d(0px, 300%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-        <div class="parallax-image parallax-image-50 skrollable skrollable-before" style="background-image: url(LNYEQYRA6G.jpg);" data-anchor-target="#kittens + .gap" data-bottom-top="transform: translate3d(0px, -60%, 0px);" data-top-bottom="transform: translate3d(0px, 60%, 0px);"></div>
-        </div-->
         <div id="skrollr-body">
-            <nav class="hidden navbar navbar-inverse navbar-fixed-top" id="dragons">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#">
-                            WEB-BRO Studio
-                        </a>
-                    </div>
-                </div>
-            </nav>
+            <nav class="navbar-inverse navbar-fixed-top" id="dragons">
+                <div id="topbar-inner">
+                    <div class="container">
+                        <div class="text-center">
+                            <div class="dropdown">
+                                <ul id="nav" class="nav">
+                                    <li class="menu-item">
+                                        <a class="smoothScroll" href="#aboutme" title="About me">
+                                            <i class="fa fa-user"></i>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="smoothScroll" href="#education" title="Education">
+                                            <i class="fa fa-graduation-cap"></i>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="smoothScroll" href="#experience" title="Experience">
+                                            <i class="fa fa-briefcase"></i>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="smoothScroll" href="#skill" title="Skills">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="smoothScroll" href="#project" title="Projects">
+                                            <i class="fa fa-folder-open"></i>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="smoothScroll" href="#contactme" title="Contact me">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul><!--/ uL#nav -->
+                            </div><!-- /.dropdown -->
+                            <div class="clear"></div>
+                        </div><!--/.row -->
+                    </div><!--/.container -->
+                    <div class="clear"></div>
+                </div><!--/ #topbar-inner -->
+            </nav><!--/ #section-topbar -->
             <div class="gap gap-100" id="hero">
                 <div id="polina" class="col-xs-12">
                     <div id="photo-header" class="text-center">
@@ -190,7 +107,7 @@
             </div>
             <div class="gap gap-50">
             </div>
-            <div class="content" id="bacons">
+            <div class="content" id="education">
                 <div class="panel container">
                     <div class="panel-heading text-uppercase col-md-3">Education</div>
                     <section id="cd-timeline" class="panel-body col-md-9 cd-container cssanimations">
@@ -330,7 +247,7 @@
                 </div>
             </div>
             <div class="gap gap-50" style="background-image:url(img/LNYEQYRA6G.jpg);"></div>
-            <div id="showcase" class="content">
+            <div id="project" class="content">
                 <div class="panel container">
                     <div class="panel-heading text-uppercase col-md-3">Showcases</div>
                     <div class="panel-body col-md-9">
@@ -463,15 +380,15 @@
                 <div class="panel container">
                     <div class="panel-heading text-uppercase col-md-3">Contact me</div>
                     <div class="panel-body col-md-3">
-                        <h3>Gmail</h3>
+                        <h3><i class="fa fa-google-plus-square"></i> Gmail</h3>
                         <a href="mailto:mr.ncwing@gmail.com">mr.ncwing@gmail.com</a>
                     </div>
                     <div class="panel-body col-md-3">
-                        <h3>Facebook</h3>
+                        <h3><i class="fa fa-facebook-official"></i> Facebook</h3>
                         <a href="https://www.facebook.com/nccwu">+ Add Friend</a>
                     </div>
                     <div class="panel-body col-md-3">
-                        <h3>Linkedin</h3>
+                        <h3><i class="fa fa-linkedin-square"></i> Linkedin</h3>
                         <a href="https://hk.linkedin.com/pub/wing-ng/88/966/267">View my profile</a>
                     </div>
                 </div>
@@ -485,6 +402,7 @@
         <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="js/chart.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="js/smoothscroll.js"></script>
         <script src="js/modernizr.custom.js"></script>
         <script src="js/toucheffects.js"></script>
         <script type="text/javascript" src="js/skrollr.min.js"></script>
