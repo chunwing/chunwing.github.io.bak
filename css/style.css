@@ -202,7 +202,7 @@ video.parallax-image {
     position:relative;
 }
 #skill{
-    height: 656px;
+    height: 900px;
 }
 #skill .panel{
     padding-bottom: 0px;
@@ -268,7 +268,7 @@ video.parallax-image {
 @media only screen and (min-width : 480px) {
 
 #skill{
-    height: 384px;
+    height: 510px;
 }
 .chart{
     padding-right: 3%;
@@ -281,7 +281,7 @@ video.parallax-image {
     }
 
 #skill{
-    height: 376px;
+    height: 500px;
 }
 .chart{
     padding-right: 10%;
